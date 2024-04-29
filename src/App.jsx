@@ -27,7 +27,7 @@ function App() {
 
   return (
     <div>
-      <h1 className='text-3xl font-bold'>APP</h1>
+      <h1 className='text-3xl font-bold '>APP</h1>
       <ReactBatchAutocomplete
         placeholder='Enter your address'
         notFoundText='Not found data'
