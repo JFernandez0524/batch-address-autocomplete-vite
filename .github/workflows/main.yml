@@ -35,10 +35,9 @@ jobs:
         with:
           node-version: 18
           cache: 'npm'
-      - name: Env Variables
-        env:
-          VITE_BATCH_SERVER_TOKEN: ${{secrets.VITE_BATCH_SERVER_TOKEN}}
       - name: Install dependencies
+        env:
+          VITE_BATCH_SERVER_TOKEN: ${{secrets.VITE_BATCH_SERVER_TOKEN}} 
         run: npm ci
       - name: Build
         run: npm run build
