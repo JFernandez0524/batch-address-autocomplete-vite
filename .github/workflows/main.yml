@@ -38,7 +38,7 @@ jobs:
       - name: Install dependencies
         env:
           VITE_BATCH_SERVER_TOKEN: ${{secrets.VITE_BATCH_SERVER_TOKEN}}
-        run: npm ci
+        run: npm install
       - name: Build
         run: VITE_BATCH_SERVER_TOKEN=${{secrets.VITE_BATCH_SERVER_TOKEN}} npm run build
       - name: Setup Pages
