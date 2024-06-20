@@ -37,10 +37,10 @@ jobs:
           cache: 'npm'
       - name: Install dependencies
         env:
-          VITE_BATCH_SERVER_TOKEN: ${{secrets.VITE_BATCH_SERVER_TOKEN}} 
+          VITE_BATCH_SERVER_TOKEN: ${{secrets.VITE_BATCH_SERVER_TOKEN}}
         run: npm ci
       - name: Build
-        run: npm run build
+        run: VITE_BATCH_SERVER_TOKEN=${{secrets.VITE_BATCH_SERVER_TOKEN}} npm run build
       - name: Setup Pages
         uses: actions/configure-pages@v4
       - name: Upload artifact
